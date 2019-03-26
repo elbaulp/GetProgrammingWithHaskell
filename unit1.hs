@@ -50,3 +50,6 @@ getLocationFunction location = case location of
 
 addressLetter name location = locationFunction name
   where locationFunction = getLocationFunction location  
+  
+  
+-- Q5.1
