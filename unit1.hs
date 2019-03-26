@@ -53,3 +53,5 @@ addressLetter name location = locationFunction name
   
   
 -- Q5.1
+-- Write a function genIfXEven that creates a closure with x and returns a new
+-- function that allows the user to pass in a function to apply to x if x is even.
