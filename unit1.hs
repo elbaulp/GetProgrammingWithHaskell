@@ -1,5 +1,3 @@
-main = do
-
 -- SumSquareOrSquareSum using lambda
 
 sumSquareorSquareSum x y = (\sumSquare squareSum ->
