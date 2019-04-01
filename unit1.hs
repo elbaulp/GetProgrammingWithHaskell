@@ -55,3 +55,13 @@ addressLetter name location = locationFunction name
 -- Q5.1
 -- Write a function genIfXEven that creates a closure with x and returns a new
 -- function that allows the user to pass in a function to apply to x if x is even.
+
+-- Q5.4
+-- Use flip and partial application to create a function called subtract2 that removes 2
+-- from whatever number is passed in to it. 
+-- First approach:
+minus x y = x - y
+substract2 = flip minus 2
+-- Second approach
+subtract2 = flip (-) 2
+-- Putting () around an infix function makes it a prefix function
