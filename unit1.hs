@@ -65,3 +65,11 @@ substract2 = flip minus 2
 -- Second approach
 subtract2 = flip (-) 2
 -- Putting () around an infix function makes it a prefix function
+
+-- Q5.2
+-- Even if Haskell didn’t have partial application, you could hack together some approximations.
+-- Following a similar pattern to flipBinaryArgs (figure 5.6), write a function binaryPartialApplication that
+-- takes a binary function and one argument and returns a new function waiting for the missing argument.
+binaryPartialApplication f x = (\y -> f x y)
+sum2 = binaryPartialApplication (+) 2
+sum2 2
