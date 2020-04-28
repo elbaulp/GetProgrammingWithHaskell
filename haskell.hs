@@ -1,3 +1,5 @@
+import Data.Char
+
 getRequestURL host apiKey resource id = host ++
                                         "/" ++
                                         resource ++
@@ -98,9 +100,21 @@ myReverse [] = []
 myReverse (x:[]) = [x]
 myReverse (x:xs) = (myReverse xs) ++ [x]
 
--- Q9.1
+-- Q9
 myRemove p [] = []
 myRemove p (x:xs) = if p x then
                       myRemove p xs
                     else
                       x:myRemove p xs
+-- Q9.1
+myElem y xs = length zs /= 0
+  where zs = filter (== y) xs
+
+-- Q9.2
+isPalindromeM word = w == reverse w
+  where w = map toLower (filter (' ' /=) word)
+
+-- Q9.3
+-- Non lazy
+harmonic n = sum l
+  where l = take n (map (1/) [1..])
