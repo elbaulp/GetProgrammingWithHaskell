@@ -97,3 +97,10 @@ collatz n = if even n then
 myReverse [] = []
 myReverse (x:[]) = [x]
 myReverse (x:xs) = (myReverse xs) ++ [x]
+
+-- Q9.1
+myRemove p [] = []
+myRemove p (x:xs) = if p x then
+                      myRemove p xs
+                    else
+                      x:myRemove p xs
